@@ -2,7 +2,7 @@
 # ==========================================
 cd
 rm -r updatedll
-wget -O updatedll "updatedll.sh"
+wget -O updatedll "https://raw.githubusercontent.com/MXVXID/V/main/updatedll.sh"
 rm -rf updatedll
 
 # hapus
