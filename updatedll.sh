@@ -22,7 +22,7 @@ wget -O certv2ray "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/x
 wget -O restart-xray "https://raw.githubusercontent.com/fisabiliyusri/XRAY-MANTAP/main/menu/restart-xray.sh"
 wget -O xmenu "https://raw.githubusercontent.com/MXVXID/V/main/xmenu.sh"
 wget -O auto-pointing "https://raw.githubusercontent.com/MXVXID/V/main/auto-pointing.sh"
-wget -O cek-port "https://github.com/MXVXID/V/raw/main/cek-port.sh"
+wget -O cek-port "https://raw.githubusercontent.com/MXVXID/V/main/cek-port.sh"
 wget -O xmenu "https://raw.githubusercontent.com/MXVXID/V/main/xmenu.sh"
 
 #
