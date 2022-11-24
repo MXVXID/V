@@ -32,7 +32,7 @@ wget https://raw.githubusercontent.com/MXVXID/V/main/install-tools.sh && chmod +
 #Instal Xray
 wget https://raw.githubusercontent.com/MXVXID/V/main/install-xray.sh && chmod +x install-xray.sh && ./install-xray.sh
 #install xmenu
-wget https://github.com/MXVXID/V/raw/main/xmenu.sh && chmod +x updatedll.sh && ./updatedll.sh
+wget https://raw.githubusercontent.com/MXVXID/V/main/updatedll.sh && chmod +x updatedll.sh && ./updatedll.sh
 #
 #SELESAI
 echo " "
