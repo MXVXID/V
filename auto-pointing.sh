@@ -20,9 +20,9 @@ echo "$SUB_DOMAIN" >> /etc/v2ray/domain
 #
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
 subsl=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-DOMAIN=mantapxsl.my.id
-SUB_DOMAIN=sg${sub}.mxvx.my.id
-NS_DOMAIN=ns${sub}.mxvx.my.id
+DOMAIN=mxvx.my.id
+SUB_DOMAIN=${sub}.mxvx.my.id
+NS_DOMAIN=${sub}.mxvx.my.id
 CF_ID=mkhottib@outlook.com
 CF_KEY=4c23a1f45a897d66e3affe46c91f166c6340a
 set -euo pipefail
