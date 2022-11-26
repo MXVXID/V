@@ -297,18 +297,18 @@ wget -O tendang "https://raw.githubusercontent.com/MXVXID/mx/main/vxi5/ssh/tenda
 wget -O menu-set "https://raw.githubusercontent.com/MXVXID/mx/main/vxi5/menu/menu-set.sh"
 wget -O menu-domain "https://raw.githubusercontent.com/MXVXID/mx/main/vxi5/menu/menu-domain.sh"
 wget -O add-host "https://raw.githubusercontent.com/MXVXID/mx/main/vxi5/ssh/add-host.sh"
-wget -O port-change "https://raw.githubusercontent.com/MXVXID/mx/main/port/port-change.sh"
-wget -O certv2ray "https://raw.githubusercontent.com/MXVXID/mx/main/xray/certv2ray.sh"
-wget -O menu-webmin "https://raw.githubusercontent.com/MXVXID/mx/main/menu/menu-webmin.sh"
+wget -O port-change "https://raw.githubusercontent.com/MXVXID/mx/main/vxi5/port/port-change.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/MXVXID/mx/main/vxi5/xray/certv2ray.sh"
+wget -O menu-webmin "https://raw.githubusercontent.com/MXVXID/mx/main/vxi5/menu/menu-webmin.sh"
 wget -O speedtest "https://raw.githubusercontent.com/MXVXID/mx/main/vxi5/ssh/speedtest_cli.py"
-wget -O about "https://raw.githubusercontent.com/MXVXID/mx/main/menu/about.sh"
-wget -O auto-reboot "https://raw.githubusercontent.com/MXVXID/mx/main/menu/auto-reboot.sh"
-wget -O restart "https://raw.githubusercontent.com/MXVXID/mx/main/menu/restart.sh"
-wget -O bw "https://raw.githubusercontent.com/MXVXID/mx/main/menu/bw.sh"
+wget -O about "https://raw.githubusercontent.com/MXVXID/mx/main/vxi5/menu/about.sh"
+wget -O auto-reboot "https://raw.githubusercontent.com/MXVXID/mx/main/vxi5/menu/auto-reboot.sh"
+wget -O restart "https://raw.githubusercontent.com/MXVXID/mx/main/vxi5/menu/restart.sh"
+wget -O bw "https://raw.githubusercontent.com/MXVXID/mx/main/vxi5/menu/bw.sh"
 
 # change port
-wget -O port-ssl "https://raw.githubusercontent.com/MXVXID/mx/main/port/port-ssl.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/MXVXID/mx/main/port/port-ovpn.sh"
+wget -O port-ssl "https://raw.githubusercontent.com/MXVXID/mx/main/vxi5/port/port-ssl.sh"
+wget -O port-ovpn "https://raw.githubusercontent.com/MXVXID/mx/main/vxi5/port/port-ovpn.sh"
 
 
 wget -O xp "https://raw.githubusercontent.com/MXVXID/mx/main/vxi5/ssh/xp.sh"
