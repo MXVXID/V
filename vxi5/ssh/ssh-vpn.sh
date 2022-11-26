@@ -312,7 +312,7 @@ wget -O port-ovpn "https://raw.githubusercontent.com/MXVXID/mx/main/vxi5/port/po
 
 
 wget -O xp "https://raw.githubusercontent.com/MXVXID/mx/main/vxi5/ssh/xp.sh"
-wget -O acs-set "https://raw.githubusercontent.com/MXVXID/mx/main/acs-set.sh"
+wget -O acs-set "https://raw.githubusercontent.com/MXVXID/mx/main/vxi5/acs-set.sh"
 
 wget -O sshws "https://raw.githubusercontent.com/MXVXID/mx/main/vxi5/ssh/sshws.sh"
 
