@@ -214,7 +214,7 @@ cat > /etc/xray/config.json << END
        "streamSettings":{
          "network": "grpc",
             "grpcSettings": {
-                "serviceName": "vmess-grpc"
+                "serviceName": "worryfree-grpc"
           }
         }
      },
@@ -569,7 +569,7 @@ sed -i '$ igrpc_set_header Host \$http_host;' /etc/nginx/conf.d/xray.conf
 sed -i '$ igrpc_pass grpc://127.0.0.1:24456;' /etc/nginx/conf.d/xray.conf
 sed -i '$ i}' /etc/nginx/conf.d/xray.conf
 
-sed -i '$ ilocation ^~ /vmess-grpc' /etc/nginx/conf.d/xray.conf
+sed -i '$ ilocation ^~ /worryfree-grpc' /etc/nginx/conf.d/xray.conf
 sed -i '$ i{' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_redirect off;' /etc/nginx/conf.d/xray.conf
 sed -i '$ igrpc_set_header X-Real-IP \$remote_addr;' /etc/nginx/conf.d/xray.conf
@@ -635,7 +635,7 @@ wget -O cektrgo "https://raw.githubusercontent.com/MXVXID/mx/main/vxi5/xray/cekt
 
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
-yellow "xray/worryfree"
+yellow "xray/Vmess"
 yellow "xray/Vless"
 
 mv /root/domain /etc/xray/ 

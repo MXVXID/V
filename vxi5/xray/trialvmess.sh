@@ -49,7 +49,7 @@ grpc=`cat<<EOF
       "id": "${uuid}",
       "aid": "0",
       "net": "grpc",
-      "path": "vmess-grpc",
+      "path": "/worryfree-grpc",
       "type": "none",
       "host": "",
       "tls": "tls"
@@ -79,7 +79,7 @@ echo -e "alterId        : 0"
 echo -e "Security       : auto"
 echo -e "Network        : ws"
 echo -e "Path           : /worryfree"
-echo -e "ServiceName    : vmess-grpc"
+echo -e "ServiceName    : worryfree-grpc"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "Link TLS       : ${vmesslink1}"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
