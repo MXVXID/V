@@ -1,21 +1,11 @@
 #!/bin/bash
-# SL
-# ==========================================
-# Color
-RED='\033[0;31m'
-NC='\033[0m'
-GREEN='\033[0;32m'
-ORANGE='\033[0;33m'
-BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-LIGHT='\033[0;37m'
-# ==========================================
-# Getting
+clear
+echo "Tunggu 5 detik "
 
+sleep 5
 clear
 echo -n > /tmp/other.txt
-data=( `cat /etc/trojan-go/akun.conf | grep '^###' | cut -d ' ' -f 2`);
+data=( `cat /etc/trojan-go/akun.conf | grep '^###' | cut -d ' ' -f 2 | sort | uniq`);
 echo "------------------------------------";
 echo "-----=[ Trojan-Go User Login ]=-----";
 echo "------------------------------------";
