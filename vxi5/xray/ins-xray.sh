@@ -132,7 +132,47 @@ cat > /etc/xray/config.json << END
        "streamSettings":{
          "network": "ws",
             "wsSettings": {
+                "path": "/vmess"
+          }
+        }
+     },
+    {
+      "listen": "127.0.0.1",
+      "port": "25432",
+      "protocol": "trojan",
+      "settings": {
+          "decryption":"none",		
+           "clients": [
+              {
+                 "password": "${uuid}"
+#wor
+             }
+          ]
+       },
+       "streamSettings":{
+         "network": "ws",
+            "wsSettings": {
                 "path": "/worryfree"
+          }
+        }
+     },
+    {
+      "listen": "127.0.0.1",
+      "port": "25432",
+      "protocol": "trojan",
+      "settings": {
+          "decryption":"none",		
+           "clients": [
+              {
+                 "password": "${uuid}"
+#kuot
+             }
+          ]
+       },
+       "streamSettings":{
+         "network": "ws",
+            "wsSettings": {
+                "path": "/kuota-habis"
           }
         }
      },
@@ -500,7 +540,9 @@ sed -i '$ iproxy_set_header Connection "upgrade";' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_set_header Host \$http_host;' /etc/nginx/conf.d/xray.conf
 sed -i '$ i}' /etc/nginx/conf.d/xray.conf
 
+sed -i '$ ilocation = /vmess' /etc/nginx/conf.d/xray.conf
 sed -i '$ ilocation = /worryfree' /etc/nginx/conf.d/xray.conf
+sed -i '$ ilocation = /kuota-habis' /etc/nginx/conf.d/xray.conf
 sed -i '$ i{' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_redirect off;' /etc/nginx/conf.d/xray.conf
 sed -i '$ iproxy_pass http://127.0.0.1:23456;' /etc/nginx/conf.d/xray.conf

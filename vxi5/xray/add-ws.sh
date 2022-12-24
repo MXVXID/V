@@ -54,7 +54,7 @@ acs=`cat<<EOF
       "id": "${uuid}",
       "aid": "0",
       "net": "ws",
-      "path": "/worryfree",
+      "path": "/vmess",
       "type": "none",
       "host": "",
       "tls": "tls"
@@ -69,12 +69,75 @@ ask=`cat<<EOF
       "id": "${uuid}",
       "aid": "0",
       "net": "ws",
+      "path": "/vmess",
+      "type": "none",
+      "host": "",
+      "tls": "none"
+}
+EOF`
+
+worry=`cat<<EOF
+      {
+      "v": "2",
+      "ps": "${user}",
+      "add": "${domain}",
+      "port": "443",
+      "id": "${uuid}",
+      "aid": "0",
+      "net": "ws",
+      "path": "/worryfree",
+      "type": "none",
+      "host": "",
+      "tls": "tls"
+}
+EOF`
+free=`cat<<EOF
+      {
+      "v": "2",
+      "ps": "${user}",
+      "add": "${domain}",
+      "port": "80",
+      "id": "${uuid}",
+      "aid": "0",
+      "net": "ws",
       "path": "/worryfree",
       "type": "none",
       "host": "",
       "tls": "none"
 }
 EOF`
+
+kuota=`cat<<EOF
+      {
+      "v": "2",
+      "ps": "${user}",
+      "add": "${domain}",
+      "port": "443",
+      "id": "${uuid}",
+      "aid": "0",
+      "net": "ws",
+      "path": "/kuota-habis",
+      "type": "none",
+      "host": "",
+      "tls": "tls"
+}
+EOF`
+habis=`cat<<EOF
+      {
+      "v": "2",
+      "ps": "${user}",
+      "add": "${domain}",
+      "port": "80",
+      "id": "${uuid}",
+      "aid": "0",
+      "net": "ws",
+      "path": "/kuota-habis",
+      "type": "none",
+      "host": "",
+      "tls": "none"
+}
+EOF`
+
 grpc=`cat<<EOF
       {
       "v": "2",
@@ -96,6 +159,10 @@ vmess_base643=$( base64 -w 0 <<< $vmess_json3)
 vmesslink1="vmess://$(echo $acs | base64 -w 0)"
 vmesslink2="vmess://$(echo $ask | base64 -w 0)"
 vmesslink3="vmess://$(echo $grpc | base64 -w 0)"
+vmesslink4="vmess://$(echo $worry | base64 -w 0)"
+vmesslink5="vmess://$(echo $free | base64 -w 0)"
+vmesslink6="vmess://$(echo $kuota | base64 -w 0)"
+vmesslink7="vmess://$(echo $habis | base64 -w 0)"
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
@@ -111,12 +178,22 @@ echo -e "id             : ${uuid}" | tee -a /etc/log-create-user.log
 echo -e "alterId        : 0" | tee -a /etc/log-create-user.log
 echo -e "Security       : auto" | tee -a /etc/log-create-user.log
 echo -e "Network        : ws" | tee -a /etc/log-create-user.log
+echo -e "Path           : /vmess" | tee -a /etc/log-create-user.log
 echo -e "Path           : /worryfree" | tee -a /etc/log-create-user.log
+echo -e "Path           : /kuota-habis" | tee -a /etc/log-create-user.log
 echo -e "ServiceName    : worryfree-grpc" | tee -a /etc/log-create-user.log
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━Vmess━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Link TLS       : ${vmesslink1}" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Link none TLS  : ${vmesslink2}" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━Worryfree━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "Link TLS (Worryfree)      : ${vmesslink4}" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "Link none TLS (Worryfree)  : ${vmesslink5}" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━kuota-habis━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "Link TLS  (kuota-habis)     : ${vmesslink6}" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e "Link none TLS (kuota-habis)  : ${vmesslink7}" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Link GRPC      : ${vmesslink3}" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
